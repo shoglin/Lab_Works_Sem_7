@@ -10,14 +10,10 @@ for i=1:length(my_excel_files)
     velocity = my_file_table.velocity;
 
     figure;
-    xlabel('Время, с');
-    ylabel('Координата, м');
     hold on;
-    plot(time , position, 'Color', 'r', 'LineStyle', '-', 'Marker', 'o', 'LineWidth', 1, 'DisplayName', 'Line1');
+    plot(time , position, 'Color', 'r', 'LineStyle', '-', 'Marker', 'o', 'LineWidth', 1, 'DisplayName', 'Line1', 'F.');
 
     figure;
-    xlabel('Время, с');
-    ylabel('Скорость, м/c');
     hold on;
     plot(time , velocity, 'Color', 'b', 'LineStyle', '--', 'Marker', 'x', 'LineWidth', 1.5, 'DisplayName', 'Line2')
     
