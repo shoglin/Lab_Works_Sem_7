@@ -9,17 +9,20 @@ for i=1:length(my_excel_files)
     position = my_file_table.position;
     velocity = my_file_table.velocity;
 
-    figure;
+    f=figure;
+    grid on;
     xlabel('Время, с');
     ylabel('Координата, м');
     hold on;
-    plot(time , position, 'Color', 'r', 'LineStyle', '-', 'Marker', 'o', 'LineWidth', 1, 'DisplayName', 'Line1');
+    plot(time , position, 'Color', 'r', 'LineStyle', '-', 'Marker', 'o', 'LineWidth', 1, 'DisplayName', 'Line1')
+    exportgraphics(f, 'graphics.png', 'Resolution', 300);
 
-    figure;
+    g=figure;
+    grid on;
     xlabel('Время, с');
     ylabel('Скорость, м/c');
     hold on;
     plot(time , velocity, 'Color', 'b', 'LineStyle', '--', 'Marker', 'x', 'LineWidth', 1.5, 'DisplayName', 'Line2')
-    
+    exportgraphics(g, 'graphics1.png', 'Resolution', 300);
 end
 
